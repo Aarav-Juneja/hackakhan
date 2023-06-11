@@ -63,25 +63,25 @@ const response3 = {
 }
 
 app.post("/help", async (req, res)=>{
-    // const response = await openai.createCompletion({
-    //     model: "text-davinci-003",
-    //     prompt: `Give a hint for this question: "${req.body}"`,
-    //     max_tokens: 16,
-    // });
+    const response = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: `Give a hint for this question: "${req.body}"`,
+        max_tokens: 16,
+    });
     
-    const response = response2
+    // const response = response2
     console.log(response.data)
     res.status(200).send(response.data)
 })
 
 app.post("/explain", async (req, res)=>{
-    // const response = await openai.createCompletion({
-    //     model: "text-davinci-003",
-    //     prompt: `Explain how to solve "${req.body}"`,
-    //     max_tokens: 26,
-    // });
+    const response = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: `Explain how to solve "${req.body}"`,
+        max_tokens: 26,
+    });
     
-    const response = response3
+    // const response = response3
     console.log(response.data)
     res.status(200).send(response.data)
 })

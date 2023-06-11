@@ -180,6 +180,7 @@ function done() {
     $("#force_next").hide()
     $("#score_symbols").hide()
     $("#time_out").hide()
+    $("#title").hide()
     question_data = {}
     attempts = 0
     score=0
