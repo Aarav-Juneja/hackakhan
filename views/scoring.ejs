@@ -1,0 +1,33 @@
+<%- include('header'); %>
+
+<header>
+    <h1 id="start-header"><i class="fa-solid fa-hat-wizard"></i> Scoring System <i class="fa-solid fa-hat-wizard"></i></h1>
+    <p id="welcome">
+        Quizzard's scoring system is set to add points based on the amount of tries you took for each question.
+        <ul class="list-group text-center" id="welcome">
+            <li class="list-group-item list-group-item-success">Correct Answer on the First Try = 2 Points</li>
+            <li class="list-group-item list-group-item-warning">Correct Answer on the Second Try = 1 Point</li>
+            <li class="list-group-item list-group-item-danger">Wrong Answer on Both Tries = 0 Points</li>
+        </ul>
+        <br>
+        <div id="welcome">So this means that a 10 question quiz has a total of 20 points possible to earn.</div>
+    </p>
+    <hr>
+    <h1 id="start-header"><i class="fa-solid fa-hat-wizard"></i> Answer Types <i class="fa-solid fa-hat-wizard"></i></h1>
+    <p id="welcome">
+        Quizzard has two types of answers. Multiple-choice or typed answers. Whenever there is a multiple choice question,
+        you will see radiobuttons. When there is a typed answer question, you will see a textbox where you can type your answer.
+    </p>
+    <hr>
+    <h1 id="start-header"><i class="fa-solid fa-hat-wizard"></i> Color Coding <i class="fa-solid fa-hat-wizard"></i></h1>
+    <p id="welcome">
+        Quizzard's color coding system is very easy to understand. While taking a quiz, you will see squares at the bottom. These
+        signify the problems you did correct/wrong and the tries they took based on three colors. <span class="text-success">Green</span>
+        means that you completed the question on the first try, <span class="text-warning">yellow</span> means that you completed the question
+        on the second try, and <span class="text-danger">red</span> means you got the question wrong on both tries. The points you get is determined
+        by the tries you took. See the list at the top of the page.
+    </p>
+    <hr>
+</header>
+
+<%- include('footer'); %>
