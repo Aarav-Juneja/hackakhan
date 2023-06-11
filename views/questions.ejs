@@ -2,6 +2,11 @@
 <div>
     <h1 id="start-header"><i class="fa-solid fa-hat-wizard"></i>Select a Subject<i class="fa-solid fa-hat-wizard"></i></h1>
 </div>
+<div>
+    <span id="timer">30.0</span>
+    seconds
+</div>
+<hr>
 
 <div class="d-flex justify-content-center" id="dropdown">
     <div class="d-flex justify-content-center flex-grow-0">
@@ -11,9 +16,9 @@
                     Math
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#" value="grade6_math">6th Grade</a></li>
-                    <li><a class="dropdown-item" href="#" value="grade7_math">7th Grade</a></li>
-                    <li><a class="dropdown-item" href="#" value="grade8_math">8th Grade</a></li>
+                    <li><a class="dropdown-item" href="#" value="grade6_math">Math 6th</a></li>
+                    <li><a class="dropdown-item" href="#" value="grade7_math">Math 7th</a></li>
+                    <li><a class="dropdown-item" href="#" value="grade8_math">Math 8th</a></li>
                     <div class="dropdown-divider"></div>
                     <li><a class="dropdown-item" href="#" value="algebra1">Algebra</a></li>
                     <li><a class="dropdown-item" href="#" value="geometry">Geometry</a></li>
@@ -34,14 +39,14 @@
                         History
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" value="grade6_history">6th Grade</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade7_history">7th Grade</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade8_history">8th Grade</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade6_history">History 6th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade7_history">History 7th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade8_history">History 8th</a></li>
                         <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="#" value="grade9_history">9th Grade</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade10_history">10th Grade</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade11_history">11th Grade</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade12_history">12th Grade</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade9_history">History 9th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade10_history">History 10th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade11_history">History 11th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade12_history">History 12th</a></li>
                         <div class="dropdown-divider"></div>
                         <li><a class="dropdown-item" href="#" value="AP_US_history">AP US History</a></li>
                         <li><a class="dropdown-item" href="#" value="AP_world_history">AP World History</a></li>
@@ -56,9 +61,9 @@
                     Science
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#" value="grade6_science">6th Grade</a></li>
-                    <li><a class="dropdown-item" href="#" value="grade7_science">7th Grade</a></li>
-                    <li><a class="dropdown-item" href="#" value="grade8_science">8th Grade</a></li>
+                    <li><a class="dropdown-item" href="#" value="grade6_science">Science 6th</a></li>
+                    <li><a class="dropdown-item" href="#" value="grade7_science">Science 7th</a></li>
+                    <li><a class="dropdown-item" href="#" value="grade8_science">Science 8th</a></li>
                     <div class="dropdown-divider"></div>
                     <li><a class="dropdown-item" href="#" value="biology">Biology</a></li>
                     <li><a class="dropdown-item" href="#" value="chemistry">Chemistry</a></li>
@@ -77,14 +82,14 @@
                         English
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" value="grade6_english">6th Grade</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade7_english">7th Grade</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade8_english">8th Grade</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade6_english">English 6th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade7_english">English 7th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade8_english">English 8th</a></li>
                         <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="#" value="grade9_english">English 9</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade10_english">English 10</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade11_english">English 11</a></li>
-                        <li><a class="dropdown-item" href="#" value="grade12_english">English 12</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade9_english">English 9th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade10_english">English 10th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade11_english">English 11th</a></li>
+                        <li><a class="dropdown-item" href="#" value="grade12_english">English 12th</a></li>
                         <!-- <div class="dropdown-divider"></div>
                         <li><a class="dropdown-item" href="#">AP English Language and Composition</a></li>
                         <li><a class="dropdown-item" href="#">AP English Literature and Composition</a></li> -->
@@ -108,7 +113,10 @@
     That's not the correct answer. Try again
 </div>
 <div id="force_next" class="alert alert-danger">
-    You failed! Try the next question <button id="next2" class="btn btn-outline-dark">Next</button>
+    You failed! The correct answer was <code id="correct_answer"></code> Try the next question.   <button id="next2" class="btn btn-outline-dark">Next</button>
+</div>
+<div id="time_out" class="alert alert-danger">
+    You ran out of time! The correct answer was <code id="correct_answer1"></code> Try the next question.   <button id="next3" class="btn btn-outline-dark">Next</button>
 </div>
 <div id="spinner">
     <iframe src="https://giphy.com/embed/3oEjI6SIIHBdRxXI40" width="100" height="100" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -117,10 +125,13 @@
     </p>-->
 </div>
 <div class="d-flex justify-content-center">
-    <div>
+    <div id="option-container">
         <h2 id="title"></h2>
         <div id="inputQuestions">
-            <input type="text" placeholder="Enter the answer here" id="answer">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                <input type="text" class="form-control w-75" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="answer">
+            </div>
             <input type="button" value="Submit" id="submit" class="btn btn-outline-primary">
         </div>
         <div id="multipleChoiceQuestions">
@@ -140,9 +151,26 @@
     </div>
 </div>
 
-<div id="score_symbols">
-    <h4>Score: <span id="score">0</span></h4>
+<div id="done">
+    <h1 class="textfont">Congratulations!</h1>
+    <p class="paragraph">Congratulations on finishing this quiz! You received <span id="end_point"></span> points for this quiz.</p>
+</div>
 
+<hr>
+
+<div id="score_symbols">
+    <h4 id="score-text">Score: <span id="score">0</span></h4>
+    <br>
+    <i class='fa-solid fa-circle fa-2xl' id="score1"></i>
+    <i class='fa-solid fa-circle fa-2xl' id="score2"></i>
+    <i class='fa-solid fa-circle fa-2xl' id="score3"></i>
+    <i class='fa-solid fa-circle fa-2xl' id="score4"></i>
+    <i class='fa-solid fa-circle fa-2xl' id="score5"></i>
+    <i class='fa-solid fa-circle fa-2xl' id="score6"></i>
+    <i class='fa-solid fa-circle fa-2xl' id="score7"></i>
+    <i class='fa-solid fa-circle fa-2xl' id="score8"></i>
+    <i class='fa-solid fa-circle fa-2xl' id="score9"></i>
+    <i class='fa-solid fa-circle fa-2xl' id="score10"></i>
 </div>
 
 <audio controls style="display: none" id="successAudio">
